@@ -5,13 +5,16 @@ import { FaHouseChimney } from "react-icons/fa6";
 import { FaPhoneAlt, FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 
+import imagemTopo from "@/assets/image/imagem_do_topo_2.png";
+import imagemFinal from "@/assets/image/imagem_do_final_1.png";
+
 function Contato() {
   return (
     <>
         <section id="contato" className="relative w-full min-h-screen overflow-hidden">
             {/* imagem topo */}
             <img
-                src="./src/assets/image/imagem_do_topo_2.png"
+                src={imagemTopo}
                 alt="Imagem do topo"
                 className="w-full h-auto -mt-1"
             />
@@ -128,7 +131,7 @@ function Contato() {
 
             {/* imagem final */}
             <img
-                src="./src/assets/image/imagem_do_final_1.png"
+                src={imagemFinal}
                 alt="Imagem do final"
                 className="w-full h-auto mt-1"
             />

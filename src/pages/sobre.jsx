@@ -6,6 +6,23 @@ import { VscVscode } from "react-icons/vsc";
 import { SiDbeaver, SiScrapy  } from "react-icons/si";
 import Titulo from "../components/titulo.jsx";
 
+import fotoEu from "@/assets/image/foto_eu_2.jpeg";
+import imagemTopo from "@/assets/image/imagem_do_topo.png";
+import python from "@/assets/image/tecnologias/python_logo.png";
+import react from "@/assets/image/tecnologias/react_logo.png";
+import js from "@/assets/image/tecnologias/javascript_logo.png";
+import ts from "@/assets/image/tecnologias/typescript_logo.png";
+import html from "@/assets/image/tecnologias/html_logo.png";
+import css from "@/assets/image/tecnologias/css_logo.png";
+import git from "@/assets/image/tecnologias/git_logo.png";
+import docker from "@/assets/image/tecnologias/docker_logo.png";
+import vscode from "@/assets/image/tecnologias/vscode_logo.png";
+import github from "@/assets/image/tecnologias/github_logo.png";
+import dbeaver from "@/assets/image/tecnologias/debeaver_logo.png";
+import scrapy from "@/assets/image/tecnologias/web_scraping_logo.png";
+import figma from "@/assets/image/tecnologias/figma_logo.png";
+import rpa from "@/assets/image/tecnologias/rpa_logo.png";
+
 const techLogos = [
   { node: <DiPython className="h-12 w-12 text-[var(--color-primary)]" />, title: "Python" },
   { node: <DiReact className="h-12 w-12 text-[var(--color-primary)]" />, title: "React" },
@@ -21,13 +38,17 @@ const techLogos = [
   { node: <SiScrapy className="h-12 w-12 text-[var(--color-primary)]" />, title: "Scrapy" },
 ]
 
+const techLogosImages = [python, react, js, ts, html, css];
+const ferramentasLogosImages = [git, github, vscode, docker, dbeaver];
+const outrasLogosImages = [figma, rpa, scrapy];
+
 function Sobre() {
   return (
     <section id="sobre" className="w-full min-h-screen bg-[var(--color-secondary)] overflow-hidden">
 
       {/* imagem topo */}
       <img
-        src="./src/assets/image/imagem_do_topo.png"
+        src={imagemTopo}
         alt="Imagem do topo"
         className="w-full h-auto -mt-1"
       />
@@ -42,7 +63,7 @@ function Sobre() {
           {/* FOTO */}
           <div className="bg-black rounded-lg overflow-hidden p-4">
             <img
-              src="./src/assets/image/foto_eu_2.jpeg"
+              src={fotoEu}
               alt="Imagem Sobre Mim"
               className="w-full h-72 md:h-full object-cover rounded-lg"
             />
@@ -99,21 +120,11 @@ function Sobre() {
                     Tecnologias
                   </h3>
 
+                  {/* LOGOS DE TECNOLOGIAS */}
                   <div className="flex flex-wrap gap-4 mt-3">
-                    {[
-                      "python_logo.png",
-                      "react_logo.png",
-                      "javascript_logo.png",
-                      "typescript_logo.png",
-                      "html_logo.png",
-                      "css_logo.png",
-                    ].map((logo) => (
-                      <div key={logo} className="h-10 w-10 flex items-center justify-center">
-                        <img
-                          src={`./src/assets/image/tecnologias/${logo}`}
-                          alt={logo}
-                          className="h-full w-auto object-contain"
-                        />
+                    {techLogosImages.map((logo, i) => (
+                      <div key={i} className="h-10 w-10 flex items-center justify-center">
+                        <img src={logo} alt="logo tecnologia" />
                       </div>
                     ))}
                   </div>
@@ -125,20 +136,11 @@ function Sobre() {
                     Ferramentas
                   </h3>
 
+                  {/* LOGOS DE FERRAMENTAS */}
                   <div className="flex flex-wrap gap-4 mt-3">
-                    {[
-                      "vscode_logo.png",
-                      "git_logo.png",
-                      "github_logo.png",
-                      "docker_logo.png",
-                      "debeaver_logo.png",
-                    ].map((logo) => (
-                      <div key={logo} className="h-10 w-10 flex items-center justify-center">
-                        <img
-                          src={`./src/assets/image/tecnologias/${logo}`}
-                          alt={logo}
-                          className="h-full w-auto object-contain"
-                        />
+                    {ferramentasLogosImages.map((logo, i) => (
+                      <div key={i} className="h-10 w-10 flex items-center justify-center">
+                        <img src={logo} alt="logo ferramenta" />
                       </div>
                     ))}
                   </div>
@@ -150,18 +152,11 @@ function Sobre() {
                     Outras
                   </h3>
 
-                  <div className="flex gap-4 mt-3">
-                    {[
-                      "figma_logo.png",
-                      "rpa_logo.png",
-                      "web_scraping_logo.png",
-                    ].map((logo) => (
-                      <div key={logo} className="h-10 w-10 flex items-center justify-center">
-                        <img
-                          src={`./src/assets/image/tecnologias/${logo}`}
-                          alt={logo}
-                          className="h-full w-auto object-contain"
-                        />
+                  {/* LOGOS DE OUTRAS */}
+                  <div className="flex flex-wrap gap-4 mt-3">
+                    {outrasLogosImages.map((logo, i) => (
+                      <div key={i} className="h-10 w-10 flex items-center justify-center">
+                        <img src={logo} alt="logo ferramenta" />
                       </div>
                     ))}
                   </div>

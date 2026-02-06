@@ -1,5 +1,7 @@
 import Titulo from "../components/titulo.jsx";
 import { BagIcon, CodeIcon, BrushIcon, AcademicIcon, BalanceIcon, GraficIcon } from "../components/svg_icons.jsx";
+import imagemTopo from "@/assets/image/imagem_do_topo_2.png";
+import imagemFinal from "@/assets/image/imagem_do_final_1.png";
 
 
 function Topicos() {
@@ -7,7 +9,7 @@ function Topicos() {
     <section id="topicos" className="w-full min-h-screen bg-[var(--color-background)] overflow-hidden flex flex-col gap-20">
       {/* imagem topo */}
       <img
-        src="./src/assets/image/imagem_do_topo_2.png"
+        src={imagemTopo}
         alt="Imagem do topo"
         className="w-full h-auto -mt-1"
       />
@@ -173,7 +175,7 @@ function Topicos() {
 
       {/* imagem final */}
       <img
-        src="./src/assets/image/imagem_do_final_1.png"
+        src={imagemFinal}
         alt="Imagem do final"
         className="w-full h-auto mt-1"
       />

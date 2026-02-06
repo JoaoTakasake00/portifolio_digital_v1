@@ -1,4 +1,5 @@
 import Aurora from "../components/Aurora.jsx";
+import fotoPerfil from "@/assets/image/eu_editado_sem_fundo.png";
 
 function Home() {
   return (
@@ -46,7 +47,7 @@ function Home() {
         {/* IMAGEM */}
         <div className="order-1 md:order-2 flex justify-center items-center">
           <img
-            src="./src/assets/image/eu_editado_sem_fundo.png"
+            src={fotoPerfil}
             alt="Foto de Perfil"
             className="
               w-full
