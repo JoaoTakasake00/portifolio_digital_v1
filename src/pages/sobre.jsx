@@ -23,7 +23,7 @@ const techLogos = [
 
 function Sobre() {
   return (
-    <section className="w-full min-h-screen bg-[var(--color-secondary)] overflow-hidden">
+    <section id="sobre" className="w-full min-h-screen bg-[var(--color-secondary)] overflow-hidden">
 
       {/* imagem topo */}
       <img

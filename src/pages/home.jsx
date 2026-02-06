@@ -2,7 +2,7 @@ import Aurora from "../components/Aurora.jsx";
 
 function Home() {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden">
+    <section id="home" className="relative w-full min-h-screen overflow-hidden">
 
       {/* BACKGROUND AURORA */}
       <div className="absolute inset-0 z-0">

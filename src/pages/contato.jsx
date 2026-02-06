@@ -8,7 +8,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 function Contato() {
   return (
     <>
-        <section className="relative w-full min-h-screen overflow-hidden">
+        <section id="contato" className="relative w-full min-h-screen overflow-hidden">
             {/* imagem topo */}
             <img
                 src="./src/assets/image/imagem_do_topo_2.png"

@@ -4,7 +4,7 @@ import { BagIcon, CodeIcon, BrushIcon, AcademicIcon, BalanceIcon, GraficIcon } f
 
 function Topicos() {
   return (
-    <section className="w-full min-h-screen bg-[var(--color-background)] overflow-hidden flex flex-col gap-20">
+    <section id="topicos" className="w-full min-h-screen bg-[var(--color-background)] overflow-hidden flex flex-col gap-20">
       {/* imagem topo */}
       <img
         src="./src/assets/image/imagem_do_topo_2.png"

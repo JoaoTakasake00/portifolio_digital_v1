@@ -5,7 +5,7 @@ import CardLink from "../components/CardLink";
 
 function Projetos() {
   return (
-    <section className="w-full min-h-screen bg-[var(--color-secondary)] overflow-hidden flex flex-col gap-20">
+    <section id="projetos" className="w-full min-h-screen bg-[var(--color-secondary)] overflow-hidden flex flex-col gap-20">
 
       <Titulo Titulo="Projetos" Subtitulo="プロジェクト" align="left" margin="ml-25 mt-10"/>
 
