@@ -48,7 +48,7 @@ function Topicos() {
             <div className="flex flex-col items-center gap-2 text-center">
               <CodeIcon className="w-10 h-10 sm:w-12 sm:h-12" />
               <h1 className="text-base sm:text-lg font-bold">4 anos como</h1>
-              <h1 className="text-base sm:text-lg font-[Moderniz]">
+              <h1 style={{ fontFamily: "Moderniz" }} className="text-base sm:text-lg">
                 desenvolvedor
               </h1>
             </div>
@@ -74,7 +74,7 @@ function Topicos() {
             <div className="flex flex-col items-center gap-2 text-center">
               <BagIcon className="w-10 h-10 sm:w-12 sm:h-12" />
               <h1 className="text-base sm:text-lg font-bold">3 anos de</h1>
-              <h1 className="text-base sm:text-lg font-[Moderniz]">Trabalho</h1>
+              <h1 style={{ fontFamily: "Moderniz" }} className="text-base sm:text-lg">Trabalho</h1>
             </div>
           </div>
 
@@ -97,7 +97,7 @@ function Topicos() {
             <div className="flex flex-col items-center gap-2 text-center">
               <BrushIcon className="w-10 h-10 sm:w-12 sm:h-12" />
               <h1 className="text-base sm:text-lg font-bold">1 ano como</h1>
-              <h1 className="text-base sm:text-lg font-[Moderniz]">Designer</h1>
+              <h1 style={{ fontFamily: "Moderniz" }} className="text-base sm:text-lg">Designer</h1>
             </div>
           </div>
 
@@ -120,7 +120,7 @@ function Topicos() {
             <div className="flex flex-col items-center gap-2 text-center">
               <BalanceIcon className="w-10 h-10 sm:w-12 sm:h-12" />
               <h1 className="text-base sm:text-lg font-bold">3 anos de curso</h1>
-              <h1 className="text-base sm:text-lg font-[Moderniz]">tecnico em informatica</h1>
+              <h1 style={{ fontFamily: "Moderniz" }} className="text-base sm:text-lg">tecnico em informatica</h1>
             </div>
           </div>
 
@@ -144,7 +144,7 @@ function Topicos() {
             <div className="flex flex-col items-center gap-2 text-center">
               <AcademicIcon className="w-10 h-10 sm:w-12 sm:h-12" />
               <h1 className="text-base sm:text-lg font-bold">2 anos de tecnologo</h1>
-              <h1 className="text-base sm:text-lg font-[Moderniz]">Analise e Desenvolvimento de sistemas</h1>
+              <h1 style={{ fontFamily: "Moderniz" }} className="text-base sm:text-lg">Analise e Desenvolvimento de sistemas</h1>
             </div>
           </div>
 
@@ -167,7 +167,7 @@ function Topicos() {
             <div className="flex flex-col items-center gap-2 text-center">
               <GraficIcon className="w-10 h-10 sm:w-12 sm:h-12" />
               <h1 className="text-base sm:text-lg font-bold">Dezenas de cursos</h1>
-              <h1 className="text-base sm:text-lg font-[Moderniz]">programacao</h1>
+              <h1 style={{ fontFamily: "Moderniz" }} className="text-base sm:text-lg">programacao</h1>
             </div>
           </div>
         </div>

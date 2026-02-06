@@ -35,7 +35,7 @@ function Home() {
             私のデジタルポートフォリオへようこそ。
           </h2>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-[Moderniz] leading-tight">
+          <h1 style={{ fontFamily: "Moderniz" }} className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
             Seja bem-vindo ao meu portfolio digital
           </h1>
 

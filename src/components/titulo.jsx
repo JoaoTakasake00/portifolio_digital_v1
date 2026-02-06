@@ -7,7 +7,7 @@ function Titulo({ Titulo, Subtitulo, align = "center", margin = "my-10" }) {
 
   return (
     <div className={`flex flex-col ${alignClasses[align]} ${margin}`}>
-      <h1 className="text-white font-[Moderniz] text-2xl sm:text-3xl leading-none">
+      <h1 style={{ fontFamily: "Moderniz" }} className="text-white text-2xl sm:text-3xl leading-none">
         {Titulo}
       </h1>
       <h2 className="text-white text-lg sm:text-2xl leading-none">

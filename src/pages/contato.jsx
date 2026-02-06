@@ -39,7 +39,7 @@ function Contato() {
                 "
               >
                 <div className="flex flex-col gap-2">
-                  <h1 className="text-base sm:text-lg font-[Moderniz]">Informacoes de Contato</h1>
+                  <h1 style={{ fontFamily: "Moderniz" }}className="text-base sm:text-lg ">Informacoes de Contato</h1>
                   <p className="text-base sm:text-sm font-normal">Se você gostou do meu trabalho e procura um profissional comprometido, 
                     apaixonado por tecnologia e focado em resultados, fico à disposição para conversarmos. 
                     Tenho experiência no desenvolvimento de soluções criativas e eficientes, 
@@ -51,19 +51,19 @@ function Contato() {
                 <div className="flex flex-col gap-2">
                   <div className="flex flex-row items-center gap-2">
                     <FaHouseChimney className="w-3 h-3 sm:w-5 sm:h-5 text-[var(--color-primary)]" />
-                    <h1 className="text-base sm:text-lg font-[Subito] font-bold">Endereco:</h1>
+                    <h1 style={{ fontFamily: "Subito" }} className="text-base sm:text-lg font-bold">Endereco:</h1>
                     <p className="text-base sm:text-lg font-normal">Barueri - SP</p>
                   </div>
 
                   <div className="flex flex-row items-center gap-2">
                     <MdEmail className="w-4 h-4 sm:w-6 sm:h-6 text-[var(--color-primary)]" />
-                    <h1 className="text-base sm:text-lg font-[Subito] font-bold">Email:</h1>
+                    <h1 style={{ fontFamily: "Subito" }} className="text-base sm:text-lg font-bold">Email:</h1>
                     <p className="text-base sm:text-lg font-normal">jv2takasake@gmail.com</p>
                   </div>
 
                   <div className="flex flex-row items-center gap-2">
                     <FaPhoneAlt  className="w-3 h-3 sm:w-5 sm:h-5 text-[var(--color-primary)]" />
-                    <h1 className="text-base sm:text-lg font-[Subito] font-bold">Telefone:</h1>
+                    <h1 style={{ fontFamily: "Subito" }} className="text-base sm:text-lg font-bold">Telefone:</h1>
                     <p className="text-base sm:text-lg font-normal">+55 (11) 970820335</p>
                   </div>
 
@@ -73,10 +73,10 @@ function Contato() {
                         href="https://wa.me/5511970820335"
                         target="_blank"
                         rel="noopener noreferrer"
+                        style={{ fontFamily: "Subito" }}
                         className="
                           text-base 
                           sm:text-lg 
-                          font-[Subito] 
                           font-bold
                           text-[var(--color-white)]
                           hover:text-[var(--color-primary)]
@@ -93,10 +93,10 @@ function Contato() {
                         href="https://www.linkedin.com/in/joao-victor-takasake/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        style={{ fontFamily: "Subito" }}
                         className="
                           text-base 
-                          sm:text-lg 
-                          font-[Subito] 
+                          sm:text-lg
                           font-bold
                           text-[var(--color-white)]
                           hover:text-[var(--color-primary)]
@@ -112,10 +112,10 @@ function Contato() {
                         href="https://github.com/JoaoTakasake00"
                         target="_blank"
                         rel="noopener noreferrer"
+                        style={{ fontFamily: "Subito" }}
                         className="
                           text-base 
                           sm:text-lg 
-                          font-[Subito] 
                           font-bold
                           text-[var(--color-white)]
                           hover:text-[var(--color-primary)]

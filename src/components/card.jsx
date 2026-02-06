@@ -36,14 +36,14 @@ function Card({
           text-center
         "
         >
-          <h1 className="text-xl font-[Moderniz]">{emptyText}</h1>
+          <h1 style={{ fontFamily: "Moderniz" }} className="text-xl">{emptyText}</h1>
         </div>
       ) : (
         /* 🔹 Conteúdo normal */
         <>
           {/* 🔝 TOPO FIXO */}
           <div className="flex flex-col gap-1">
-            <h2 className="text-lg text-[var(--color-primary-white)] font-[Moderniz]">
+            <h2 style={{ fontFamily: "Moderniz" }} className="text-lg text-[var(--color-primary-white)]">
               {title}
             </h2>
             <p className="text-[var(--color-primary-white)] font-bold">

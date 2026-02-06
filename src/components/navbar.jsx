@@ -29,7 +29,8 @@ function Navbar() {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-white font-[Moderniz] hover:text-white/70 transition"
+              style={{ fontFamily: "Moderniz" }} 
+              className="text-white hover:text-white/70 transition"
             >
               {item.label}
             </button>
@@ -52,7 +53,8 @@ function Navbar() {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="block w-full text-left text-white font-[Moderniz] text-lg"
+              style={{ fontFamily: "Moderniz" }} 
+              className="block w-full text-left text-white text-lg"
             >
               {item.label}
             </button>

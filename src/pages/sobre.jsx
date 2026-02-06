@@ -74,7 +74,7 @@ function Sobre() {
 
             {/* NOME + TEXTO */}
             <div className="bg-black rounded-lg p-5 flex flex-col gap-4">
-              <h3 className="text-white text-lg sm:text-xl font-bold font-[Moderniz]">
+              <h3 style={{ fontFamily: "Moderniz" }} className="text-white text-lg sm:text-xl font-bold">
                 Joao Victor Takasake
               </h3>
 
@@ -91,9 +91,9 @@ function Sobre() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
               {/* SKILLS */}
-              <div className="bg-[var(--color-primary)] rounded-lg p-5 flex flex-col gap-4">
+              <div className="bg-[var(--color-primary)] rounded-lg p-5 flex flex-col gap-7">
                 <div>
-                  <h3 className="text-white font-bold font-[Moderniz]">
+                  <h3 style={{ fontFamily: "Moderniz" }} className="text-white font-bold">
                     Habilidades
                   </h3>
                   <h2 className="text-white text-sm">
@@ -101,7 +101,7 @@ function Sobre() {
                   </h2>
                 </div>
 
-                <ul className="text-white text-sm sm:text-base font-[Subito] space-y-1">
+                <ul style={{ fontFamily: "Moderniz" }} className="text-white text-sm sm:text-sm space-y-1">
                   <li>• Trabalho em equipe</li>
                   <li>• Comunicacao eficaz</li>
                   <li>• Proatividade</li>
@@ -116,7 +116,7 @@ function Sobre() {
 
                 {/* TECNOLOGIAS */}
                 <div>
-                  <h3 className="text-white font-bold font-[Moderniz]">
+                  <h3 style={{ fontFamily: "Moderniz" }} className="text-white font-bold">
                     Tecnologias
                   </h3>
 
@@ -132,10 +132,10 @@ function Sobre() {
 
                 {/* FERRAMENTAS */}
                 <div>
-                  <h3 className="text-white font-bold font-[Moderniz]">
+                  <h3 style={{ fontFamily: "Moderniz" }} className="text-white font-bold">
                     Ferramentas
                   </h3>
-
+ 
                   {/* LOGOS DE FERRAMENTAS */}
                   <div className="flex flex-wrap gap-4 mt-3">
                     {ferramentasLogosImages.map((logo, i) => (
@@ -148,7 +148,7 @@ function Sobre() {
 
                 {/* OUTRAS */}
                 <div>
-                  <h3 className="text-white font-bold font-[Moderniz]">
+                  <h3 style={{ fontFamily: "Moderniz" }} className="text-white font-bold">
                     Outras
                   </h3>
 
