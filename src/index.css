@@ -59,27 +59,30 @@ html, body, #root {
 }
 
 @font-face {
-  font-family: "Moderniz";
-  src: url("/fonts/Moderniz-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'MODERNIZ';
+    src: url('MODERNIZ.woff2') format('woff2'),
+        url('MODERNIZ.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Seriously";
-  src: url("/fonts/Seriously.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Subito';
+    src: url('Subito-Bold_trial.woff2') format('woff2'),
+        url('Subito-Bold_trial.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Subito";
-  src: url("/fonts/Subito-Bold_trial.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Seriously';
+    src: url('Seriously.woff2') format('woff2'),
+        url('Seriously.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* Base global */
