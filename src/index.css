@@ -59,9 +59,9 @@ html, body, #root {
 }
 
 @font-face {
-    font-family: 'MODERNIZ';
-    src: url('MODERNIZ.woff2') format('woff2'),
-        url('MODERNIZ.woff') format('woff');
+    font-family: 'Moderniz';
+    src: url('/fonts/MODERNIZ.woff2') format('woff2'),
+        url('/fonts/MODERNIZ.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -69,8 +69,8 @@ html, body, #root {
 
 @font-face {
     font-family: 'Subito';
-    src: url('Subito-Bold_trial.woff2') format('woff2'),
-        url('Subito-Bold_trial.woff') format('woff');
+    src: url('/fonts/Subito-Bold_trial.woff2') format('woff2'),
+        url('/fonts/Subito-Bold_trial.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -78,8 +78,8 @@ html, body, #root {
 
 @font-face {
     font-family: 'Seriously';
-    src: url('Seriously.woff2') format('woff2'),
-        url('Seriously.woff') format('woff');
+    src: url('/fonts/Seriously.woff2') format('woff2'),
+        url('/fonts/Seriously.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
