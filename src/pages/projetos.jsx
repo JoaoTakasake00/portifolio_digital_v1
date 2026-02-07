@@ -35,7 +35,10 @@ function Projetos() {
             topics={[
               { text: "FullStack", color: "var(--color-primary)" },
               { text: "Python", color: "var(--color-primary)" },
+              { text: "WebScrapping", color: "var(--color-primary)" },
               { text: "React", color: "var(--color-primary)" },
+              { text: "TypeScript", color: "var(--color-primary)" },
+              { text: "Figma", color: "var(--color-primary)" },
             ]}
           />
 
