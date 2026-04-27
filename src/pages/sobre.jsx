@@ -39,9 +39,26 @@ const techLogos = [
   { node: <SiScrapy className="h-12 w-12 text-[var(--color-primary)]" />, title: "Scrapy" },
 ]
 
-const techLogosImages = [python, react, js, ts, html, css];
-const ferramentasLogosImages = [git, github, vscode, docker, dbeaver];
-const outrasLogosImages = [figma, rpa, scrapy];
+const techLogosImages = [
+  { src: python, name: "Python" },
+  { src: react, name: "React" },
+  { src: js, name: "JavaScript" },
+  { src: ts, name: "TypeScript" },
+  { src: html, name: "HTML" },
+  { src: css, name: "CSS" },
+];
+const ferramentasLogosImages = [
+  { src: git, name: "Git" },
+  { src: github, name: "GitHub" },
+  { src: vscode, name: "VS Code" },
+  { src: docker, name: "Docker" },
+  { src: dbeaver, name: "DBeaver" },
+];
+const outrasLogosImages = [
+  { src: figma, name: "Figma" },
+  { src: rpa, name: "RPA" },
+  { src: scrapy, name: "Scrapy" },
+];
 const skillItems = [
   "Trabalho em equipe",
   "Comunicacao eficaz",
@@ -72,7 +89,11 @@ function Sobre() {
         <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6 pb-12">
 
           {/* FOTO */}
-          <div className="bg-black rounded-lg overflow-hidden p-4">
+          <div
+            className="about-card-interactive about-tooltip-anchor bg-black rounded-lg overflow-hidden p-4"
+            title="João victor Takasake"
+            aria-label="João victor Takasake"
+          >
             <img
               src={fotoEu}
               alt="Imagem Sobre Mim"
@@ -80,13 +101,14 @@ function Sobre() {
               decoding="async"
               className="w-full h-72 md:h-full object-cover rounded-lg"
             />
+            <span className="about-tooltip-content about-tooltip-content--inside">João victor Takasake</span>
           </div>
 
           {/* COLUNA DIREITA */}
           <div className="md:col-span-2 flex flex-col gap-6">
 
             {/* NOME + TEXTO */}
-            <div className="bg-black rounded-lg p-5 flex flex-col gap-4">
+            <div className="about-card-interactive bg-black rounded-lg p-5 flex flex-col gap-4">
               <ScrollReveal
                 as="h3"
                 duration={860}
@@ -116,7 +138,7 @@ function Sobre() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
               {/* SKILLS */}
-              <div className="bg-[var(--color-primary)] rounded-lg p-5 flex flex-col gap-7">
+              <div className="about-card-interactive bg-[var(--color-primary)] rounded-lg p-5 flex flex-col gap-7">
                 <div>
                   <ScrollReveal
                     as="h3"
@@ -157,7 +179,7 @@ function Sobre() {
               </div>
 
               {/* TECNOLOGIAS + FERRAMENTAS */}
-              <div className="bg-black rounded-lg p-5 flex flex-col gap-6">
+              <div className="about-card-interactive bg-black rounded-lg p-5 flex flex-col gap-6">
 
                 {/* TECNOLOGIAS */}
                 <div>
@@ -167,9 +189,16 @@ function Sobre() {
 
                   {/* LOGOS DE TECNOLOGIAS */}
                   <div className="flex flex-wrap gap-4 mt-3">
-                    {techLogosImages.map((logo, i) => (
-                      <div key={i} className="h-10 w-10 flex items-center justify-center">
-                        <img src={logo} alt="logo tecnologia" loading="lazy" decoding="async" />
+                    {techLogosImages.map((logo) => (
+                      <div
+                        key={logo.name}
+                        className="about-logo-interactive about-tooltip-anchor h-10 w-10 flex items-center justify-center"
+                        title={logo.name}
+                        aria-label={logo.name}
+                        tabIndex={0}
+                      >
+                        <img src={logo.src} alt={`logo ${logo.name}`} loading="lazy" decoding="async" />
+                        <span className="about-tooltip-content">{logo.name}</span>
                       </div>
                     ))}
                   </div>
@@ -183,9 +212,16 @@ function Sobre() {
  
                   {/* LOGOS DE FERRAMENTAS */}
                   <div className="flex flex-wrap gap-4 mt-3">
-                    {ferramentasLogosImages.map((logo, i) => (
-                      <div key={i} className="h-10 w-10 flex items-center justify-center">
-                        <img src={logo} alt="logo ferramenta" loading="lazy" decoding="async" />
+                    {ferramentasLogosImages.map((logo) => (
+                      <div
+                        key={logo.name}
+                        className="about-logo-interactive about-tooltip-anchor h-10 w-10 flex items-center justify-center"
+                        title={logo.name}
+                        aria-label={logo.name}
+                        tabIndex={0}
+                      >
+                        <img src={logo.src} alt={`logo ${logo.name}`} loading="lazy" decoding="async" />
+                        <span className="about-tooltip-content">{logo.name}</span>
                       </div>
                     ))}
                   </div>
@@ -199,9 +235,16 @@ function Sobre() {
 
                   {/* LOGOS DE OUTRAS */}
                   <div className="flex flex-wrap gap-4 mt-3">
-                    {outrasLogosImages.map((logo, i) => (
-                      <div key={i} className="h-10 w-10 flex items-center justify-center">
-                        <img src={logo} alt="logo ferramenta" loading="lazy" decoding="async" />
+                    {outrasLogosImages.map((logo) => (
+                      <div
+                        key={logo.name}
+                        className="about-logo-interactive about-tooltip-anchor h-10 w-10 flex items-center justify-center"
+                        title={logo.name}
+                        aria-label={logo.name}
+                        tabIndex={0}
+                      >
+                        <img src={logo.src} alt={`logo ${logo.name}`} loading="lazy" decoding="async" />
+                        <span className="about-tooltip-content">{logo.name}</span>
                       </div>
                     ))}
                   </div>
