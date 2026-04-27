@@ -1,4 +1,5 @@
 import CardTip from "./cardTip.jsx";
+import ScrollReveal from "./ScrollReveal.jsx";
 
 function Card({
   title,
@@ -36,25 +37,53 @@ function Card({
           text-center
         "
         >
-          <h1 style={{ fontFamily: "Moderniz" }} className="text-xl">{emptyText}</h1>
+          <ScrollReveal
+            as="h3"
+            duration={850}
+            distance={30}
+            style={{ fontFamily: "Moderniz" }}
+            className="text-xl"
+          >
+            {emptyText}
+          </ScrollReveal>
         </div>
       ) : (
         /* 🔹 Conteúdo normal */
         <>
           {/* 🔝 TOPO FIXO */}
           <div className="flex flex-col gap-1">
-            <h2 style={{ fontFamily: "Moderniz" }} className="text-lg text-[var(--color-primary-white)]">
+            <ScrollReveal
+              as="h2"
+              duration={780}
+              distance={24}
+              style={{ fontFamily: "Moderniz" }}
+              className="text-lg text-[var(--color-primary-white)]"
+            >
               {title}
-            </h2>
-            <p className="text-[var(--color-primary-white)] font-bold">
+            </ScrollReveal>
+            <ScrollReveal
+              as="p"
+              order={1}
+              duration={780}
+              distance={20}
+              className="text-[var(--color-primary-white)]/90 font-semibold"
+            >
               {data}
-            </p>
+            </ScrollReveal>
           </div>
 
           {/* 🧠 CONTEÚDO FLEXÍVEL */}
           <div className="flex flex-col gap-4 flex-1 mt-4">
             {content && (
-              <p className="text-[var(--color-primary-white)]">{content}</p>
+              <ScrollReveal
+                as="p"
+                order={2}
+                duration={780}
+                distance={20}
+                className="text-[var(--color-primary-white)] leading-relaxed"
+              >
+                {content}
+              </ScrollReveal>
             )}
 
             {topics.length > 0 && (
@@ -74,7 +103,9 @@ function Card({
           {srcImage && (
             <img
               src={srcImage}
-              alt=""
+              alt={`Imagem do projeto ${title}`}
+              loading="lazy"
+              decoding="async"
               className="w-full h-auto object-contain mt-6"
             />
           )}

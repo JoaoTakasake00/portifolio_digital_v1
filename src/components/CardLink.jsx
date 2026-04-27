@@ -10,48 +10,38 @@ function CardLink({
   emBreve = false,
   emptyText = "Projeto em breve",
 }) {
-  const handleOpen = () => {
-    if (!emBreve && link) {
-      window.open(link, "_blank");
-    }
-  };
+  const cardClassName = `
+    cards-slide
+    relative
+    group
+    h-full
+    ${!emBreve ? "cursor-pointer rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]" : ""}
+  `
 
   return (
     <div className="cards-perspective h-full">
-      <div
-        role={!emBreve ? "link" : undefined}
-        tabIndex={!emBreve ? 0 : -1}
-        onClick={handleOpen}
-        onKeyDown={(e) => {
-          if ((e.key === "Enter" || e.key === " ") && !emBreve) {
-            handleOpen();
-          }
-        }}
-        className={`
-          cards-slide
-          relative 
-          group 
-          h-full
-          ${!emBreve ? "cursor-pointer rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]" : ""}
-        `}
-      >
-        {/* CARD */}
-        <Card
-          title={title}
-          data={data}
-          content={content}
-          srcImage={srcImage}
-          topics={topics}
-          emBreve={emBreve}
-          emptyText={emptyText}
-        />
+      {!emBreve && link ? (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Abrir projeto ${title}`}
+          className={cardClassName}
+        >
+          <Card
+            title={title}
+            data={data}
+            content={content}
+            srcImage={srcImage}
+            topics={topics}
+            emBreve={emBreve}
+            emptyText={emptyText}
+          />
 
-        {/* OVERLAY */}
-        {!emBreve && (
           <div
             className="
-              absolute 
-              inset-0 
+              absolute
+              inset-0
               rounded-lg
               bg-black/40
               backdrop-blur-0
@@ -63,17 +53,16 @@ function CardLink({
               transition-all
               duration-350
               ease-out
-              flex 
-              items-center 
+              flex
+              items-center
               justify-center
               pointer-events-none
             "
           >
-            <button
+            <span
               className="
-                pointer-events-auto
-                cursor-pointer
-                px-6 
+                pointer-events-none
+                px-6
                 py-3
                 font-semibold
                 rounded-md
@@ -92,10 +81,23 @@ function CardLink({
               "
             >
               Visualizar
-            </button>
+            </span>
           </div>
-        )}
-      </div>
+        </a>
+      ) : (
+        <div className={cardClassName}>
+        {/* CARD */}
+        <Card
+          title={title}
+          data={data}
+          content={content}
+          srcImage={srcImage}
+          topics={topics}
+          emBreve={emBreve}
+          emptyText={emptyText}
+        />
+        </div>
+      )}
     </div>
   );
 }

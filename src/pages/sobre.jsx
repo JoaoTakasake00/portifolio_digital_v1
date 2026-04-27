@@ -5,6 +5,7 @@ import { BiLogoJavascript, BiLogoTypescript, BiLogoDocker   } from "react-icons/
 import { VscVscode } from "react-icons/vsc";
 import { SiDbeaver, SiScrapy  } from "react-icons/si";
 import Titulo from "../components/titulo.jsx";
+import ScrollReveal from "../components/ScrollReveal.jsx";
 
 import fotoEu from "@/assets/image/foto_eu_2.jpeg";
 import imagemTopo from "@/assets/image/imagem_do_topo.png";
@@ -41,6 +42,14 @@ const techLogos = [
 const techLogosImages = [python, react, js, ts, html, css];
 const ferramentasLogosImages = [git, github, vscode, docker, dbeaver];
 const outrasLogosImages = [figma, rpa, scrapy];
+const skillItems = [
+  "Trabalho em equipe",
+  "Comunicacao eficaz",
+  "Proatividade",
+  "Facilidade de aprendizado",
+  "Criatividade",
+  "Inteligencia emocional",
+];
 
 function Sobre() {
   return (
@@ -50,10 +59,12 @@ function Sobre() {
       <img
         src={imagemTopo}
         alt="Imagem do topo"
+        loading="lazy"
+        decoding="async"
         className="w-full h-auto -mt-1"
       />
 
-      <div className="flex flex-col items-center gap-10 px-4 sm:px-8 lg:px-24 mt-10">
+      <div className="section-container section-spacing flex flex-col items-center gap-10">
 
         <Titulo Titulo="Sobre Mim" Subtitulo="私について" />
 
@@ -65,6 +76,8 @@ function Sobre() {
             <img
               src={fotoEu}
               alt="Imagem Sobre Mim"
+              loading="lazy"
+              decoding="async"
               className="w-full h-72 md:h-full object-cover rounded-lg"
             />
           </div>
@@ -74,17 +87,29 @@ function Sobre() {
 
             {/* NOME + TEXTO */}
             <div className="bg-black rounded-lg p-5 flex flex-col gap-4">
-              <h3 style={{ fontFamily: "Moderniz" }} className="text-white text-lg sm:text-xl font-bold">
+              <ScrollReveal
+                as="h3"
+                duration={860}
+                distance={30}
+                style={{ fontFamily: "Moderniz" }}
+                className="text-white text-lg sm:text-xl font-bold"
+              >
                 Joao Victor Takasake
-              </h3>
+              </ScrollReveal>
 
-              <p className="text-white text-sm sm:text-base leading-relaxed">
+              <ScrollReveal
+                as="p"
+                order={1}
+                duration={860}
+                distance={28}
+                className="text-white text-sm sm:text-base leading-relaxed"
+              >
                 Busco integrar uma equipe de desenvolvimento atuando principalmente como
                 desenvolvedor, com capacidade de colaborar tanto no front-end quanto no
-                back-end. Tenho interesse em contribuir com solucoes eficientes e de
+                back-end. Tenho interesse em contribuir com soluções eficientes e de
                 qualidade, enquanto continuo meu crescimento profissional em um ambiente
                 colaborativo e desafiador.
-              </p>
+              </ScrollReveal>
             </div>
 
             {/* SKILLS + TEC */}
@@ -93,21 +118,41 @@ function Sobre() {
               {/* SKILLS */}
               <div className="bg-[var(--color-primary)] rounded-lg p-5 flex flex-col gap-7">
                 <div>
-                  <h3 style={{ fontFamily: "Moderniz" }} className="text-white font-bold">
+                  <ScrollReveal
+                    as="h3"
+                    duration={760}
+                    distance={24}
+                    style={{ fontFamily: "Moderniz" }}
+                    className="text-white font-bold"
+                  >
                     Habilidades
-                  </h3>
-                  <h2 className="text-white text-sm">
+                  </ScrollReveal>
+                  <ScrollReveal
+                    as="h2"
+                    order={1}
+                    duration={760}
+                    distance={20}
+                    className="text-white text-sm"
+                  >
                     スキル
-                  </h2>
+                  </ScrollReveal>
                 </div>
 
                 <ul style={{ fontFamily: "Moderniz" }} className="text-white text-sm sm:text-sm space-y-1">
-                  <li>• Trabalho em equipe</li>
-                  <li>• Comunicacao eficaz</li>
-                  <li>• Proatividade</li>
-                  <li>• Facilidade de aprendizado</li>
-                  <li>• Criatividade</li>
-                  <li>• Inteligencia emocional</li>
+                  {skillItems.map((skill, index) => (
+                    <ScrollReveal
+                      key={skill}
+                      as="li"
+                      delay={120}
+                      order={index}
+                      stagger={80}
+                      duration={700}
+                      distance={20}
+                      easing="easeOut"
+                    >
+                      • {skill}
+                    </ScrollReveal>
+                  ))}
                 </ul>
               </div>
 
@@ -124,7 +169,7 @@ function Sobre() {
                   <div className="flex flex-wrap gap-4 mt-3">
                     {techLogosImages.map((logo, i) => (
                       <div key={i} className="h-10 w-10 flex items-center justify-center">
-                        <img src={logo} alt="logo tecnologia" />
+                        <img src={logo} alt="logo tecnologia" loading="lazy" decoding="async" />
                       </div>
                     ))}
                   </div>
@@ -140,7 +185,7 @@ function Sobre() {
                   <div className="flex flex-wrap gap-4 mt-3">
                     {ferramentasLogosImages.map((logo, i) => (
                       <div key={i} className="h-10 w-10 flex items-center justify-center">
-                        <img src={logo} alt="logo ferramenta" />
+                        <img src={logo} alt="logo ferramenta" loading="lazy" decoding="async" />
                       </div>
                     ))}
                   </div>
@@ -156,7 +201,7 @@ function Sobre() {
                   <div className="flex flex-wrap gap-4 mt-3">
                     {outrasLogosImages.map((logo, i) => (
                       <div key={i} className="h-10 w-10 flex items-center justify-center">
-                        <img src={logo} alt="logo ferramenta" />
+                        <img src={logo} alt="logo ferramenta" loading="lazy" decoding="async" />
                       </div>
                     ))}
                   </div>

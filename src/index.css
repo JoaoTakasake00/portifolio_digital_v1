@@ -173,6 +173,21 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  section[id] {
+    scroll-margin-top: 96px;
+  }
+}
+
+.section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 2rem);
+}
+
+.section-spacing {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(3rem, 6vw, 5rem);
 }
 
 
@@ -190,6 +205,38 @@ body {
 
 .cards-slide:hover {
   transform: translateZ(8px);
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translate3d(0, var(--sr-distance, 28px), 0) scale(var(--sr-scale-from, 0.97));
+  transition:
+    opacity var(--sr-duration, 800ms) var(--sr-easing, cubic-bezier(0.22, 1, 0.36, 1)) var(--sr-delay, 0ms),
+    transform var(--sr-duration, 800ms) var(--sr-easing, cubic-bezier(0.22, 1, 0.36, 1)) var(--sr-delay, 0ms);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+}
+
+.scroll-reveal.is-visible {
+  opacity: var(--sr-exit-opacity, 1);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.scroll-reveal--fade-in {
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.scroll-reveal--scale-in {
+  transform: translate3d(0, 0, 0) scale(var(--sr-scale-from, 0.92));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto;
+  }
 }
 
 /* ----------------------------------------------
