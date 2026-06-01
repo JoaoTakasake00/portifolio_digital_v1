@@ -70,7 +70,7 @@ const skillItems = [
 
 function Sobre() {
   return (
-    <section id="sobre" className="w-full min-h-screen bg-[var(--color-secondary)] overflow-hidden">
+    <section id="sobre" className="w-full min-h-screen bg-[var(--color-secondary)] overflow-x-hidden">
 
       {/* imagem topo */}
       <img
@@ -263,6 +263,7 @@ function Sobre() {
           gap={50}
           hoverSpeed={10}
           scaleOnHover
+          respectReducedMotion={false}
           ariaLabel="Technology partners"
         />
     </section>

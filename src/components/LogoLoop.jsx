@@ -69,7 +69,7 @@ const useImageLoader = (seqRef, onLoad, dependencies) => {
   }, [onLoad, seqRef, dependencies]);
 };
 
-const useAnimationLoop = (trackRef, targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical) => {
+const useAnimationLoop = (trackRef, targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical, respectReducedMotion) => {
   const rafRef = useRef(null);
   const lastTimestampRef = useRef(null);
   const offsetRef = useRef(0);
@@ -94,7 +94,7 @@ const useAnimationLoop = (trackRef, targetVelocity, seqWidth, seqHeight, isHover
       track.style.transform = transformValue;
     }
 
-    if (prefersReduced) {
+    if (respectReducedMotion && prefersReduced) {
       track.style.transform = isVertical ? 'translate3d(0, 0, 0)' : 'translate3d(0, 0, 0)';
       return () => {
         lastTimestampRef.current = null;
@@ -137,7 +137,7 @@ const useAnimationLoop = (trackRef, targetVelocity, seqWidth, seqHeight, isHover
       }
       lastTimestampRef.current = null;
     };
-  }, [targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical, trackRef]);
+  }, [targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical, trackRef, respectReducedMotion]);
 };
 
 export const LogoLoop = memo(({
@@ -151,6 +151,7 @@ export const LogoLoop = memo(({
   hoverSpeed,
   fadeOut = false,
   fadeOutColor,
+  respectReducedMotion = true,
   scaleOnHover = false,
   renderItem,
   ariaLabel = 'Partner logos',
@@ -227,7 +228,8 @@ export const LogoLoop = memo(({
     seqHeight,
     isHovered,
     effectiveHoverSpeed,
-    isVertical
+    isVertical,
+    respectReducedMotion
   );
 
   const cssVariables = useMemo(() => ({
@@ -239,7 +241,8 @@ export const LogoLoop = memo(({
   const rootClasses = useMemo(() =>
     cx(
       'relative group',
-      isVertical ? 'overflow-hidden h-full inline-block' : 'overflow-x-hidden',
+      'w-full',
+      isVertical ? 'overflow-hidden h-full' : 'overflow-x-hidden',
       '[--logoloop-gap:32px]',
       '[--logoloop-logoHeight:28px]',
       '[--logoloop-fadeColorAuto:#ffffff]',
@@ -353,14 +356,10 @@ export const LogoLoop = memo(({
     )), [copyCount, logos, renderLogoItem, isVertical]);
 
   const containerStyle = useMemo(() => ({
-    width: isVertical
-      ? toCssLength(width) === '100%'
-        ? undefined
-        : toCssLength(width)
-      : (toCssLength(width) ?? '100%'),
+    width: toCssLength(width) ?? '100%',
     ...cssVariables,
     ...style
-  }), [width, cssVariables, style, isVertical]);
+  }), [width, cssVariables, style]);
 
   return (
     <div
